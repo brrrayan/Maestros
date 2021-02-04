@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified">
+    <xs:element name="Datos_Maestro" type="xs:string"/>
+    <xs:element name="Entidad" type="xs:string"/>
+    <xs:element name="Fecha_emision" type="xs:date"/>     
+    <xs:element name="Fecha_pago" type="xs:date"/> 
+    <xs:element name="Nomina">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Tipo_Registro">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:char">
+                            <xs:length value="10"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Codigo_Maestro">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="120"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Cedula">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="120"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Numero_cuenta">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="120"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Tipo_Contrato">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="120"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Horas_Laboradas">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="120"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Sueldo">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element> 
+                <xs:element name="Sumario" type="xs:date"/>
+                <xs:element name="Tipo_Registro">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:char">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="120"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Cantidad_Registros">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="DB|CR"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>         
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
